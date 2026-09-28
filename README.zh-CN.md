@@ -301,7 +301,7 @@ STRIPE_WEBHOOK_SECRET=
 - 在 Vercel 为当前站配置与 `daily` 相同的 `VITE_SUPABASE_URL` 和 `VITE_SUPABASE_ANON_KEY`，并新增 `VITE_APP_URL=https://aigcprompt.ruhang365.cn`。
 - 在 Supabase Dashboard 的 `Authentication -> URL Configuration` 中，把所有 `ruhang365` 体系域名加入 `Redirect URLs` 白名单。
 - 在 `Authentication -> Providers` 中启用与 `daily` 相同的登录方式，至少保持邮箱 OTP / Magic Link 和 Google 一致。
-- 若要实现真正跨站免重复登录，建议后续把 `ruhangcenter.ruhang365.cn` 做成统一认证中心；当前方案先实现统一账号，不自动共享各站前端 localStorage 会话。
+- 当前个人工作台在 `rhzl.ruhang365.cn/center`；各站共用账号不等于自动共享浏览器登录状态。
 
 <a name="section-gallery"></a>
 

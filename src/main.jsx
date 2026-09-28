@@ -34,7 +34,7 @@ const officialSiteUrl = 'https://ruhang365.cn';
 const dailySiteUrl = 'https://daily.ruhang365.cn';
 const pathSiteUrl = 'https://rhzl.ruhang365.cn';
 const toolsSiteUrl = 'https://smzdy.ruhang365.cn';
-const centerSiteUrl = 'https://ruhangcenter.ruhang365.cn';
+const centerSiteUrl = 'https://rhzl.ruhang365.cn/center';
 const subSiteUrl = 'https://sub.ruhang365.cn';
 const adpcSiteUrl = 'https://adpc.ruhang365.cn';
 const botSkillsSiteUrl = 'https://botskills.ruhang365.cn';
@@ -79,7 +79,7 @@ const copy = {
     skillPrompt: 'Start from cases and templates here, then continue into the Ruhang365 matrix based on whether you need tools, learning, news, or account services.',
     skillStats: ['Main apps', 'Branch apps', 'Content apps'],
     skillOpenDocs: 'Open main site',
-    skillNpm: 'Open account center',
+    skillNpm: 'Open my workbench',
     skillExampleAlt: 'Ruhang365 product matrix',
     skillExampleCaption: 'Each official site has a focused job inside the Ruhang365 ecosystem.',
     picksEyebrow: 'Official picks',
@@ -133,7 +133,7 @@ const copy = {
     authNotConfigured: 'Login is not configured yet.',
     authError: 'Login failed. Please try again.',
     authSharedHint: 'Shared account scope: Ruhang365, Daily, AIGC Prompt, Path, Tools, and other Ruhang365 apps connected to the same Supabase project.',
-    authCenterLink: 'Open Ruhang365 Center',
+    authCenterLink: 'Open my workbench',
     signOut: 'Sign out',
     account: 'Ruhang365 Account',
     adminPanel: 'Admin',
@@ -219,10 +219,10 @@ const copy = {
       '这里展示的是入行365体系内的官方站点矩阵。每个站点负责一个明确方向，方便用户从提示词继续走向工具、学习、资讯和账号服务。',
     skillCommandLabel: '矩阵使用方式',
     skillPromptLabel: '推荐路径',
-    skillPrompt: '先在这里找案例和模板，再根据需求进入矩阵里的工具站、学习站、资讯站或个人中心。',
+    skillPrompt: '先在这里找案例和模板，再根据需求进入工具站、学习站、资讯站或我的工作台。',
     skillStats: ['主应用矩阵', '分支应用', '资讯型应用'],
     skillOpenDocs: '打开官网',
-    skillNpm: '打开个人中心',
+    skillNpm: '打开我的工作台',
     skillExampleAlt: '入行365 产品矩阵',
     skillExampleCaption: '每个官方站点都承担清晰职责，共同构成入行365 的产品矩阵。',
     picksEyebrow: '官方精选',
@@ -276,7 +276,7 @@ const copy = {
     authNotConfigured: '登录功能还没有完成配置。',
     authError: '登录失败，请稍后再试。',
     authSharedHint: '统一账号适用范围：入行365官网、日报、提示词集合、入行之路、什么值得用，以及接入同一 Supabase 项目的其他站点。',
-    authCenterLink: '前往入行个人中心',
+    authCenterLink: '前往我的工作台',
     signOut: '退出登录',
     account: '入行365账号',
     adminPanel: '管理后台',
@@ -1505,7 +1505,7 @@ function EcosystemSection({ language }) {
         { title: '入行365日报', description: '主应用：跟进 AI 热点、趋势解读和每日精选内容。', href: dailySiteUrl },
         { title: '入行之路', description: '主应用：帮助用户梳理学习路径、行动步骤和入门方向。', href: pathSiteUrl },
         { title: '什么值得用', description: '主应用：按场景挑选值得用的 AI 工具和效率产品。', href: toolsSiteUrl },
-        { title: '入行个人中心', description: '主应用：统一管理账号、权益、会员能力和后续服务。', href: centerSiteUrl },
+        { title: '我的工作台', description: '在入行之路找回关注方向、常用内容和个人积累。', href: centerSiteUrl },
         { title: 'AI 订阅后悔药', description: '分支应用：帮助用户管理和优化 AI 订阅决策。', href: subSiteUrl },
         { title: 'agent 学习', description: '资讯型应用：聚焦 Agent 学习内容、资料和方法路径。', href: adpcSiteUrl },
         { title: 'openclaw skills集合', description: '资讯型应用：集中整理 openclaw 可用的 skills 资源。', href: botSkillsSiteUrl },
@@ -1517,7 +1517,7 @@ function EcosystemSection({ language }) {
         { title: 'Daily', description: 'Main app: follow AI news, trends, and daily curation.', href: dailySiteUrl },
         { title: 'Path', description: 'Main app: find learning paths and practical next steps.', href: pathSiteUrl },
         { title: 'Tools', description: 'Main app: choose recommended AI tools by scenario.', href: toolsSiteUrl },
-        { title: 'Center', description: 'Main app: manage account access, benefits, and services.', href: centerSiteUrl },
+        { title: 'My workbench', description: 'Resume your interests, saved resources, and personal work.', href: centerSiteUrl },
         { title: 'AI Subscription Relief', description: 'Branch app: help users review and optimize AI subscriptions.', href: subSiteUrl },
         { title: 'Agent Learning', description: 'Content app: focused on Agent learning materials and paths.', href: adpcSiteUrl },
         { title: 'OpenClaw Skills', description: 'Content app: collect usable OpenClaw skills resources.', href: botSkillsSiteUrl },
@@ -1550,7 +1550,7 @@ function EcosystemSection({ language }) {
             </div>
             <code>
               {language === 'zh'
-                ? '1. 先在本站找到接近的案例或模板。\n2. 再按需求进入矩阵里的工具站、学习站、资讯站或个人中心。\n3. 所有这里展示的链接都属于入行365官方体系。'
+                ? '1. 先在本站找到接近的案例或模板。\n2. 再按需求进入工具站、学习站、资讯站或我的工作台。\n3. 所有这里展示的链接都属于入行365官方体系。'
                 : '1. Start with a relevant case or template here.\n2. Then continue into the matrix for tools, learning, content, or account services.\n3. Every link shown here belongs to the official Ruhang365 ecosystem.'}
             </code>
           </div>

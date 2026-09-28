@@ -307,7 +307,7 @@ Unified account recommendations:
 - In Vercel, use the same `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` as Daily, and add `VITE_APP_URL=https://aigcprompt.ruhang365.cn` for stable redirect handling.
 - In Supabase Dashboard under `Authentication -> URL Configuration`, add every `ruhang365` domain to the `Redirect URLs` allowlist.
 - Under `Authentication -> Providers`, keep the enabled providers aligned with Daily, at minimum Email OTP / Magic Link and Google.
-- If you want full cross-site single sign-on later, use `ruhangcenter.ruhang365.cn` as the auth center; the current integration standardizes accounts first, but does not automatically share each site's frontend localStorage session.
+- The personal workbench now lives at `rhzl.ruhang365.cn/center`. A shared account does not automatically share browser sessions across sites.
 
 <a name="section-gallery"></a>
 
